@@ -37,9 +37,9 @@ $box-shadow-fancy: 0px 0px 0px 1px rgba($color-fancy-100, 0.8);
 // gradients
 $gradient-main-bg: linear-gradient(
   180deg,
-  rgba(194, 194, 194, 0.0001) 0%,
+  rgba($color-alt-25, 0.0001) 0%,
   rgba(108, 54, 173, 0.1) 4.375rem,
-  rgba(194, 194, 194, 0.0001) 100%
+  rgba($color-alt-25, 0.0001) 100%
 );
 $gradient-nav: linear-gradient(
   180deg,
