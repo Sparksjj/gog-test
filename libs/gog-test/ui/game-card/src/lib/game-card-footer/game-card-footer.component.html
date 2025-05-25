@@ -1,0 +1,36 @@
+<footer class="footer">
+  <section class="footer__block">
+    @if (isInCart()) {
+      <span
+        class="price"
+        lib-chip
+        [appearance]="'outline'"
+        >in cart</span
+      >
+    } @else if (item().isOwned) {
+      <span
+        class="price"
+        disabled
+        lib-chip
+        [appearance]="'outline'"
+        >owned</span
+      >
+    } @else {
+      @if (item().discount) {
+        <span
+          #discount
+          lib-chip
+          class="discount"
+          >{{ item().discount | discount }}</span
+        >
+      }
+      <span
+        #price
+        class="price"
+        lib-chip
+        [appearance]="'outline'"
+        >{{ item().prise | currency }}</span
+      >
+    }
+  </section>
+</footer>

@@ -1,9 +1,11 @@
 <button
   class="card-btn"
   type="button"
+  tabindex="0"
+  aria-label="Open cart"
   [class.active]="showCart()"
   (click)="toggleCart()">
-  <lib-cart-icon></lib-cart-icon>
+  <lib-cart-icon [showCart]="showCart()"></lib-cart-icon>
 </button>
 
 @if (showCart()) {

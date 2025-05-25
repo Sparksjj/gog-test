@@ -3,10 +3,10 @@
 
   @if (hero$ | async; as hero) {
     <div
-      class="hero"
       lib-hero-baner
       [item]="hero">
       <button
+        aria-label="A secret button"
         type="button"
         class="secret-btn">
         A secret button
@@ -14,6 +14,9 @@
     </div>
   } @else {
     <!-- should be a library for difrent cases -->
-    <section class="skeleton"></section>
+    <section
+      #skeleton
+      class="skeleton"
+      [style.height.px]="skeleton.clientWidth * heroRatio"></section>
   }
 </section>

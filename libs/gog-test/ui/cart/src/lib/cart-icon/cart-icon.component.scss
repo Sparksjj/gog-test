@@ -1,3 +1,61 @@
-.cart-count {
-  fill: var(--text-color-main-75);
+@mixin rings($duration, $delay) {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  outline: 5px solid #b65ae2;
+  border-radius: 100%;
+  animation-name: ripple;
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+  z-index: -1;
+}
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.count {
+  position: relative;
+  top: 1px;
+  right: 1px;
+  display: flex;
+  align-items: center;
+  height: 13px;
+  border-radius: 2px;
+  padding: 0 3px;
+  line-height: 1;
+  color: var(--text-color-main-75);
+
+  &.filled {
+    background: #6c36ad;
+    color: var(--text-color-alt-100);
+    font-weight: 400;
+  }
+
+  &.animated {
+    &::after {
+      @include rings(0.5s, 0s);
+    }
+
+    &::before {
+      @include rings(0.5s, 0.2s);
+    }
+  }
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale3d(0.75, 0.75, 1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale3d(1.5, 1.5, 1);
+  }
 }

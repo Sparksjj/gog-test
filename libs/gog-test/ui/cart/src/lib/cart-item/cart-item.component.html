@@ -7,9 +7,12 @@
 
 <section class="info">
   <h4 class="info__title text-l">{{ item().name }}</h4>
+
   <button
+    aria-label="Remove from cart"
     (click)="removeItem()"
     type="button"
+    tabindex="0"
     class="info__btn text-sm">
     Remove
   </button>

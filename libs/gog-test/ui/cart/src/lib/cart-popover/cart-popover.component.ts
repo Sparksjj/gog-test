@@ -22,12 +22,24 @@ export class CartPopoverComponent {
   items = this.cartStateService.cartItems;
   deleting = signal(false);
 
+  private get itemsInCartHtmlEl(): HTMLElement {
+    return this.el.nativeElement.querySelector('#items-in-cart');
+  }
+
+  private clearFunction = (() => {
+    this.cartStateService.clearCart();
+    this.itemsInCartHtmlEl?.removeEventListener(
+      'transitionend',
+      this.clearFunction
+    );
+    this.deleting.set(false);
+  }).bind(this);
+
   clearCart() {
-    this.el.nativeElement
-      .querySelector('#items-in-cart')
-      .addEventListener('transitionend', () => {
-        this.cartStateService.clearCart();
-      });
+    this.itemsInCartHtmlEl?.addEventListener(
+      'transitionend',
+      this.clearFunction
+    );
 
     this.deleting.set(true);
   }

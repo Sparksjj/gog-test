@@ -34,18 +34,6 @@
   margin: 0.688rem 0.688rem 0.375rem;
 }
 
-.footer {
-  margin: auto 0.375rem 0.438rem 0.375rem;
-  display: flex;
-  justify-content: end;
-  gap: 1rem;
-
-  &__block {
-    display: flex;
-    gap: 0.375rem;
-  }
-}
-
 .backdrop {
   position: absolute;
   inset: 0;
@@ -59,68 +47,5 @@
   &__btn {
     transform: translateY(1rem);
     transition: transform 0.3s;
-  }
-}
-
-.increment {
-  animation: kebab 500ms reverse;
-}
-
-.decrement {
-  animation: kebab 500ms;
-}
-
-@keyframes kebab {
-  0% {
-    clip-path: polygon(
-      2% 22%,
-      0 0,
-      99% 0,
-      100% 100%,
-      0 100%,
-      3% 69%,
-      5% 55%,
-      16% 49%,
-      5% 41%
-    );
-  }
-  20% {
-    clip-path: polygon(
-      2% 20%,
-      0 0,
-      99% 0,
-      100% 100%,
-      0 100%,
-      3% 73%,
-      13% 60%,
-      89% 51%,
-      7% 35%
-    );
-  }
-  40% {
-    clip-path: polygon(
-      11% 27%,
-      0 0,
-      99% 0,
-      100% 100%,
-      0 100%,
-      6% 76%,
-      15% 71%,
-      100% 60%,
-      100% 39%
-    );
-  }
-  100% {
-    clip-path: polygon(
-      28% 7%,
-      0 0,
-      100% 0,
-      100% 100%,
-      0 100%,
-      15% 92%,
-      35% 88%,
-      100% 91%,
-      100% 9%
-    );
   }
 }

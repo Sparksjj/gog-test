@@ -11,6 +11,7 @@ describe('CartIconComponent', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(CartIconComponent);
+    fixture.componentRef.setInput('showCart', false);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -11,6 +11,7 @@
 
 @if (cartItemsCount()) {
   <button
+    aria-label="Clear cart"
     (click)="onClearCart()"
     type="button"
     class="clear"
