@@ -1,0 +1,20 @@
+{
+  "name": "mock-hero",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/gog-test/util/mocks/mock-hero/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["scope:gog-test", "type:util"],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/gog-test/util/mocks/mock-hero/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

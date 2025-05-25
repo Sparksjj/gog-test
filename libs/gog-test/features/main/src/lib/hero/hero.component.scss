@@ -1,0 +1,49 @@
+@use "mixins";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100%;
+  margin-top: 1.75rem;
+}
+
+.content {
+  @include mixins.contentWidht();
+}
+
+.title {
+  margin: 0;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.secret-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 12.25rem;
+  max-width: 100%;
+  // visibility: hidden; // if we don't need focus
+  opacity: 0;
+  cursor: pointer;
+}
+
+.hero {
+  position: relative;
+}
+
+.skeleton {
+  width: 100%;
+}
+
+.content {
+  @include mixins.contentWidht();
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.25rem;
+}

@@ -4,7 +4,7 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/gog-test/src",
-  "tags": [],
+  "tags": ["type:app", "scope:gog-test"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
@@ -16,13 +16,25 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/gog-test/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/shared/ui/assets/styles/scss/components"]
+        },
         "assets": [
           {
             "glob": "**/*",
             "input": "apps/gog-test/public"
+          },
+          {
+            "glob": "**/*",
+            "ignore": ["scss"],
+            "input": "libs/shared/ui/assets",
+            "output": "assets"
           }
         ],
-        "styles": ["apps/gog-test/src/styles.scss"],
+        "styles": [
+          "libs/shared/ui/assets/styles/scss/styles.scss",
+          "apps/gog-test/src/styles.scss"
+        ],
         "scripts": [],
         "server": "apps/gog-test/src/main.server.ts",
         "ssr": {

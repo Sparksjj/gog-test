@@ -2,7 +2,10 @@
   "name": "@gog-test/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx serve gog-test",
+    "build": "nx build gog-test"
+  },
   "private": true,
   "dependencies": {
     "@angular/common": "~19.2.0",
@@ -48,7 +51,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "jest-preset-angular": "~14.4.0",
     "nx": "21.1.1",
-    "prettier": "^2.6.2",
+    "prettier": "^3.5.3",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "tslib": "^2.3.0",

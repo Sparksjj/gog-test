@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  min-height: 3.94rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  color: var(--text-color-main-100);
+
+  &__title {
+    margin: 0;
+  }
+
+  &__prise {
+  }
+}
+
+.clear {
+  min-width: 8.25rem;
+}

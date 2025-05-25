@@ -1,0 +1,15 @@
+@use "mixins";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.block {
+  @include mixins.contentWrapper();
+
+  display: flex;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}

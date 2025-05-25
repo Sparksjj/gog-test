@@ -1,0 +1,19 @@
+<section class="content">
+  <h1 class="text-xl title">{{ title }}</h1>
+
+  @if (hero$ | async; as hero) {
+    <div
+      class="hero"
+      lib-hero-baner
+      [item]="hero">
+      <button
+        type="button"
+        class="secret-btn">
+        A secret button
+      </button>
+    </div>
+  } @else {
+    <!-- should be a library for difrent cases -->
+    <section class="skeleton"></section>
+  }
+</section>

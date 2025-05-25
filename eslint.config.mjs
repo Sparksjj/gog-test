@@ -17,8 +17,36 @@ export default [
           allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?js$'],
           depConstraints: [
             {
-              sourceTag: '*',
-              onlyDependOnLibsWithTags: ['*'],
+              sourceTag: 'scope:shared',
+              onlyDependOnLibsWithTags: ['scope:shared'],
+            },
+            {
+              sourceTag: 'scope:gog-test',
+              onlyDependOnLibsWithTags: ['scope:gog-test', 'scope:shared'],
+            },
+            {
+              sourceTag: 'type:app',
+              notDependOnLibsWithTags: ['type:app'],
+            },
+            {
+              sourceTag: 'type:ui',
+              onlyDependOnLibsWithTags: ['type:ui', 'type:util'],
+            },
+            {
+              sourceTag: 'type:util',
+              onlyDependOnLibsWithTags: ['type:util'],
+            },
+            {
+              sourceTag: 'type:data-access',
+              onlyDependOnLibsWithTags: ['type:util'],
+            },
+            {
+              sourceTag: 'type:feature',
+              onlyDependOnLibsWithTags: [
+                'type:util',
+                'type:ui',
+                'type:data-access',
+              ],
             },
           ],
         },

@@ -1,0 +1,28 @@
+@use "mixins";
+
+:host {
+  @include mixins.contentWrapper;
+
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  height: 3.688rem;
+  background: var(--gradient-nav);
+  z-index: 2;
+}
+
+.content {
+  @include mixins.contentWidht;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.nav-card {
+  min-width: 3.625rem;
+  height: 100%;
+}
