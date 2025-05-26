@@ -11,7 +11,6 @@ import { SwitchThemeService } from '../switch-theme.service';
 @Component({
   selector: '[libThemeAnimation]',
   template: `<ng-content></ng-content>`,
-  styleUrl: './theme-animation.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
 })
