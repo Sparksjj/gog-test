@@ -6,6 +6,8 @@
     "start": "nx serve gog-test",
     "build": "nx build gog-test",
     "lint": "nx affected -t lint",
+    "lint-all": "nx run-many --target=lint",
+    "test": "nx run-many --target=test",
     "prepare": "husky"
   },
   "private": true,
