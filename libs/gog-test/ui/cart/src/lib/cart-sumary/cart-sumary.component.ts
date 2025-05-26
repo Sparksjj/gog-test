@@ -26,7 +26,7 @@ export class CartSumaryComponent {
 
   totalPrice = computed(() =>
     this.cartStateService.cartItems().reduce((acc, item) => {
-      return acc + (item.prise ?? 0);
+      return acc + (item.price ?? 0);
     }, 0)
   );
 

@@ -2,13 +2,13 @@
   lib-cart-sumary
   (clearCart)="clearCart()"></header>
 
-<section
+<ul
   id="items-in-cart"
   [class.deleting]="deleting()">
   @for (item of items(); track item) {
-    <div
+    <li
       class="cart-item"
       lib-cart-item
-      [item]="item"></div>
+      [item]="item"></li>
   }
-</section>
+</ul>

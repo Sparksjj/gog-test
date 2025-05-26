@@ -7,7 +7,7 @@ import { debounceTime, switchMap } from 'rxjs';
 @Directive({
   selector: '[lib-cart-data-sync]',
 })
-export class CartDataSyncComponent implements OnInit {
+export class CartDataSyncDirective implements OnInit {
   private cartStateService = inject(CartStateService);
   private cartDataService = inject(CartDataService);
 

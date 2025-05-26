@@ -7,12 +7,14 @@
   box-shadow: var(--shadow-chips);
   line-height: 0;
   color: var(--text-color-alt-70);
+  text-transform: uppercase;
 
   &.primary {
-    background: var(--background-fancy-10);
+    background-color: var(--background-fancy-10);
   }
 
   &.outline {
+    background-color: transparent;
     border: 1px solid var(--border-color-main-80);
     color: var(--text-color-main-25);
   }
@@ -20,5 +22,14 @@
   &:disabled,
   &[disabled] {
     opacity: 0.5;
+  }
+
+  &button {
+    cursor: pointer;
+
+    &:hover,
+    &:focus-within {
+      box-shadow: var(--shadow-btn);
+    }
   }
 }

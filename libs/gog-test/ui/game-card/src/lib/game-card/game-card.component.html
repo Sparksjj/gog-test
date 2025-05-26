@@ -12,16 +12,3 @@
 <footer
   lib-game-card-footer
   [item]="item()"></footer>
-
-@if (isShowBackdrop()) {
-  <section class="backdrop">
-    <button
-      aria-label="Add to cart"
-      type="button"
-      (click)="addToCart()"
-      class="backdrop__btn"
-      lib-button>
-      buy
-    </button>
-  </section>
-}

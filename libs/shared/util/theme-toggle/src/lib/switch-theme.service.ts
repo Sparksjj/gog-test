@@ -1,7 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Injectable, inject, signal } from '@angular/core';
-
-type ThemesType = 'dark' | 'light'; // | 'system'
+import { ThemesType } from './models';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +13,7 @@ export class SwitchThemeService {
   private _theme = signal<ThemesType>('light');
   private _document = inject(DOCUMENT);
 
-  toggleThem(): void {
+  toggleTheme(): void {
     this._theme.set(this.theme() === 'dark' ? 'light' : 'dark');
     this.startThemToggleAnimation();
   }
@@ -30,7 +29,7 @@ export class SwitchThemeService {
   private applyThemeToRoot(): void {
     const theme = this._theme();
 
-    const rootElement = document.documentElement;
+    const rootElement = this._document.documentElement;
     rootElement.classList.remove('dark', 'light');
     if (theme) {
       rootElement.classList.add(theme);

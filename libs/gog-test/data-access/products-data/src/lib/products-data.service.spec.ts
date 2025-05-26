@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { ProductsDataService } from './products-data.service';
 
+// no sense to test this service with mock data
 describe('HeroDataService', () => {
   let service: ProductsDataService;
 

@@ -24,13 +24,15 @@
           >{{ item().discount | discount }}</span
         >
       }
-      <span
-        #price
+      <button
+        type="button"
+        aria-label="Add to cart"
+        (click)="addToCart()"
         class="price"
         lib-chip
-        [appearance]="'outline'"
-        >{{ item().prise | currency }}</span
-      >
+        [appearance]="'outline'">
+        {{ item().price | currency }}
+      </button>
     }
   </section>
 </footer>

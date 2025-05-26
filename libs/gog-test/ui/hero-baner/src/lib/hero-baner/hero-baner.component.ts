@@ -1,6 +1,7 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  computed,
   ElementRef,
   HostListener,
   input,
@@ -19,19 +20,24 @@ import { PictureLoaderDirective } from '@gog-test/picture-loader';
 })
 export class HeroBanerComponent {
   private block = viewChild('skeleton', { read: ElementRef });
+  private currentBanerWidth = signal(1060);
+  // this proportions should be in injection token, but for simplicity we use hardcoded values
+  private readonly heroRatio = 370 / 1060;
 
-  banerWidth = signal(1060);
   item = input.required<GameModel>();
 
-  readonly heroRatio = 370 / 1060;
+  banerHeight = computed(() => {
+    const width = this.currentBanerWidth() || 1060;
+    return width * this.heroRatio;
+  });
 
   ngOnInit(): void {
-    this.banerWidth.set(this.block()?.nativeElement?.clientWidth);
+    this.currentBanerWidth.set(this.block()?.nativeElement?.clientWidth);
   }
 
   @HostListener('window:resize')
   onResize(): void {
     const width = this.block()?.nativeElement?.clientWidth || 1060;
-    this.banerWidth.set(width);
+    this.currentBanerWidth.set(width);
   }
 }

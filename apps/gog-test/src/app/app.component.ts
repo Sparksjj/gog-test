@@ -4,9 +4,6 @@ import { RouterModule } from '@angular/router';
 @Component({
   imports: [RouterModule],
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  template: '<router-outlet></router-outlet>',
 })
-export class AppComponent {
-  title = 'gog-test';
-}
+export class AppComponent {}

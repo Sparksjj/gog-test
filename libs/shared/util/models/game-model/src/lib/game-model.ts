@@ -1,7 +1,7 @@
 export interface GameModel {
   id: number;
   name: string;
-  prise: number;
+  price: number;
   discount: number;
   isOwned: boolean;
   imagesPath: string;

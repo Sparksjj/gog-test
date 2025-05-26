@@ -6,7 +6,9 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class CartStateService {
-  isNeedToSync$ = new Subject<boolean>();
+  get isNeedToSync$() {
+    return this._isNeedToSync$.asObservable();
+  }
 
   get cartItems() {
     return this._cartItems.asReadonly();
@@ -15,6 +17,8 @@ export class CartStateService {
   cartItemsCount = computed(() => this.cartItems().length);
 
   private _cartItems = signal<GameModel[]>([]);
+
+  private _isNeedToSync$ = new Subject<boolean>();
 
   resetCart(items: GameModel[], needSync = true): void {
     this._cartItems.set(items);
@@ -48,7 +52,7 @@ export class CartStateService {
 
   private checkIsNeedToSync(needSync: boolean): void {
     if (needSync) {
-      this.isNeedToSync$.next(true);
+      this._isNeedToSync$.next(true);
     }
   }
 }

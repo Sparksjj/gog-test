@@ -21,4 +21,14 @@ describe('HeroBanerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have correct initial baner height', () => {
+    expect(component.banerHeight()).toBe(370);
+  });
+
+  it('should change size on resize event', () => {
+    jest.spyOn(component, 'onResize');
+    global.dispatchEvent(new Event('resize'));
+    expect(component.onResize).toHaveBeenCalled();
+  });
 });

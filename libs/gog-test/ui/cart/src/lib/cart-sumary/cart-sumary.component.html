@@ -3,7 +3,7 @@
     <h3 class="info__title text-xl">
       {{ cartItemsCount() }} {{ 'item' | wordEnding: cartItemsCount() }} in cart
     </h3>
-    <span class="info__prise text-xl">{{ totalPrice() | currency }}</span>
+    <span class="info__price text-xl">{{ totalPrice() | currency }}</span>
   } @else {
     <h3 class="info__title text-xl">No items in the cart</h3>
   }

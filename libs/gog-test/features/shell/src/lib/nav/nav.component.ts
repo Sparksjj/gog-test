@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CartComponent } from '@gog-test/cart';
 import { CartDataService } from '@gog-test/cart-data';
-import { CartDataSyncComponent } from '../cart-data-sync/cart-data-sync.directive';
+import { CartDataSyncDirective } from '../cart-data-sync/cart-data-sync.directive';
 
 @Component({
   selector: '[lib-nav]',
-  imports: [CartComponent, CartDataSyncComponent],
+  imports: [CartComponent, CartDataSyncDirective],
   providers: [CartDataService],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',

@@ -39,3 +39,9 @@ input, button, textarea, select {
 textarea:not([rows]) {
   min-height: 10em;
 }
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

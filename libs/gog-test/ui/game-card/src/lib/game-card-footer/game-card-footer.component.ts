@@ -27,4 +27,8 @@ export class GameCardFooterComponent {
       .cartItems()
       .some(cartItem => cartItem.id === this.item().id);
   });
+
+  addToCart(): void {
+    this.cartStateService.addItem(this.item());
+  }
 }

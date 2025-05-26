@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
+// shoud be global config for the application, here only for demo purposes
 type Appearance = 'outline' | 'primary';
 
 @Component({

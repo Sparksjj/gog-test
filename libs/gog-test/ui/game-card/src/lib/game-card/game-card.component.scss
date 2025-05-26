@@ -6,16 +6,6 @@
   flex-shrink: 0;
   background-color: var(--background-card);
   box-shadow: var(--shadow-card);
-
-  &:hover,
-  &:focus-within {
-    .backdrop {
-      opacity: 1;
-      &__btn {
-        transform: translateY(0);
-      }
-    }
-  }
 }
 
 .image {
@@ -33,20 +23,4 @@
   -webkit-box-orient: vertical;
   margin: 0.688rem 0.688rem 0.375rem;
   color: var(--text-color-main-75);
-}
-
-.backdrop {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--background-card-backdrop);
-  opacity: 0;
-  transition: opacity 0.3s;
-
-  &__btn {
-    transform: translateY(1rem);
-    transition: transform 0.3s;
-  }
 }

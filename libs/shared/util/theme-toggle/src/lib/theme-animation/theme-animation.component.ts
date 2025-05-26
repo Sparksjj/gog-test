@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+import { DOCUMENT } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -15,6 +15,8 @@ import { SwitchThemeService } from '../switch-theme.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class ThemeAnimationComponent {
+  private document = inject(DOCUMENT);
+
   private theme = inject(SwitchThemeService).theme;
 
   private previosTheme = this.theme();
@@ -22,6 +24,7 @@ export class ThemeAnimationComponent {
   constructor() {
     effect(() => {
       const newTheme = this.theme();
+
       if (this.previosTheme !== newTheme) {
         this.startAnimation();
       }
@@ -34,7 +37,8 @@ export class ThemeAnimationComponent {
    * Add and remove after timeout a class to the root element to set up transition for all backgroun-color changes.
    */
   private startAnimation(): void {
-    const rootElement = document.documentElement;
+    const rootElement = this.document.documentElement;
+
     if (rootElement) {
       rootElement.classList.add('theme-animation');
 

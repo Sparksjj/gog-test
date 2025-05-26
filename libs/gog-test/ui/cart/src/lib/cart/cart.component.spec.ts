@@ -18,4 +18,12 @@ describe('CartComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should toggle showCart state', () => {
+    expect(component.showCart()).toBe(false);
+    component.toggleCart();
+    expect(component.showCart()).toBe(true);
+    component.toggleCart();
+    expect(component.showCart()).toBe(false);
+  });
 });
