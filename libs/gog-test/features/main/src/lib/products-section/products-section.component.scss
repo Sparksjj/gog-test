@@ -10,7 +10,7 @@
   scroll-snap-type: x mandatory;
 }
 
-lib-game-card {
+[lib-game-card] {
   scroll-snap-align: none start;
   scroll-margin: 0 0 0 2rem;
 }
