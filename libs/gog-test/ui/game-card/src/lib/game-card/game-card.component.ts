@@ -2,10 +2,8 @@ import {
   ChangeDetectionStrategy,
   Component,
   computed,
-  ElementRef,
   inject,
   input,
-  viewChildren,
 } from '@angular/core';
 import { ButtonComponent } from '@gog-test/button';
 import { CartStateService } from '@gog-test/cart-state';
@@ -24,10 +22,6 @@ import { GameCardFooterComponent } from '../game-card-footer/game-card-footer.co
   },
 })
 export class GameCardComponent {
-  private price = viewChildren('price', {
-    read: ElementRef,
-  });
-
   private cartStateService = inject(CartStateService);
 
   item = input.required<GameModel>();

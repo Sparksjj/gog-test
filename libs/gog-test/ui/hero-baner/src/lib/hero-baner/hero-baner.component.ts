@@ -1,4 +1,12 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  HostListener,
+  input,
+  signal,
+  viewChild,
+} from '@angular/core';
 import { GameModel } from '@gog-test/game-model';
 import { PictureLoaderDirective } from '@gog-test/picture-loader';
 
@@ -10,5 +18,20 @@ import { PictureLoaderDirective } from '@gog-test/picture-loader';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeroBanerComponent {
+  private block = viewChild('skeleton', { read: ElementRef });
+
+  banerWidth = signal(1060);
   item = input.required<GameModel>();
+
+  readonly heroRatio = 370 / 1060;
+
+  ngOnInit(): void {
+    this.banerWidth.set(this.block()?.nativeElement?.clientWidth);
+  }
+
+  @HostListener('window:resize')
+  onResize(): void {
+    const width = this.block()?.nativeElement?.clientWidth || 1060;
+    this.banerWidth.set(width);
+  }
 }

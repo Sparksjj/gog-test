@@ -50,6 +50,7 @@
         "libs/gog-test/data-access/products-data/src/index.ts"
       ],
       "@gog-test/shell": ["libs/gog-test/features/shell/src/index.ts"],
+      "@gog-test/theme-toggle": ["libs/shared/util/theme-toggle/src/index.ts"],
       "@gog-test/web-storage": ["libs/shared/util/web-storage/src/index.ts"],
       "@gog-test/word-ending-pipe": [
         "libs/shared/util/word-ending-pipe/src/index.ts"

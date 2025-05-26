@@ -1,22 +1,22 @@
-$color-main-100: #000000; // 0
-$color-main-80: #1a1a1a; // 26
-$color-main-60: #212121; // 33
-$color-main-40: #262626; // 38
-$color-main-20: #404040; // 64
+$color-main-100: #000000 !default; // 0
+$color-main-80: #1a1a1a !default; // 26
+$color-main-60: #212121 !default; // 33
+$color-main-40: #262626 !default; // 38
+$color-main-20: #404040 !default; // 64
 
-$color-alt-100: #ffffff; // 255
-$color-alt-85: #ebebeb; // 235
-$color-alt-70: #e0e0e0; // 224
-$color-alt-55: #d9d9d9; // 217
-$color-alt-40: #cdcdcd; // 205
-$color-alt-25: #c2c2c2; // 194
-$color-alt-20: #b8b8b8; // 184
-$color-alt-15: #979797; // 151
+$color-alt-100: #ffffff !default; // 255
+$color-alt-85: #ebebeb !default; // 235
+$color-alt-70: #e0e0e0 !default; // 224
+$color-alt-55: #d9d9d9 !default; // 217
+$color-alt-40: #cdcdcd !default; // 205
+$color-alt-25: #c2c2c2 !default; // 194
+$color-alt-20: #b8b8b8 !default; // 184
+$color-alt-15: #979797 !default; // 151
 
-$color-fancy-100: #6c36ad; // 108, 54, 173
-$color-fancy-60: #7a3dc6; // 122, 61, 198
-$color-fancy-30: #b65ae2; // 182, 90, 226
-$color-fancy-10: #00905e; // 0, 144, 94
+$color-fancy-100: #6c36ad !default; // 108, 54, 173
+$color-fancy-60: #7a3dc6 !default; // 122, 61, 198
+$color-fancy-30: #b65ae2 !default; // 182, 90, 226
+$color-fancy-10: #00905e !default; // 0, 144, 94
 
 // content width
 $content-width: 1060px;
