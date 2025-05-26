@@ -1,0 +1,9 @@
+@use "custom-properties";
+@use "custom-properties-dark";
+@use "fonts";
+@use "typography";
+@use "them-animation";
+
+body {
+  font-family: var(--font-family-main);
+}

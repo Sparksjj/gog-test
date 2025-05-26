@@ -1,0 +1,72 @@
+$color-main-100: #000000 !default; // 0
+$color-main-80: #1a1a1a !default; // 26
+$color-main-60: #212121 !default; // 33
+$color-main-40: #262626 !default; // 38
+$color-main-20: #404040 !default; // 64
+
+$color-alt-100: #ffffff !default; // 255
+$color-alt-85: #ebebeb !default; // 235
+$color-alt-70: #e0e0e0 !default; // 224
+$color-alt-55: #d9d9d9 !default; // 217
+$color-alt-40: #cdcdcd !default; // 205
+$color-alt-25: #c2c2c2 !default; // 194
+$color-alt-20: #b8b8b8 !default; // 184
+$color-alt-15: #979797 !default; // 151
+
+$color-fancy-100: #6c36ad !default; // 108, 54, 173
+$color-fancy-60: #7a3dc6 !default; // 122, 61, 198
+$color-fancy-30: #b65ae2 !default; // 182, 90, 226
+$color-fancy-10: #00905e !default; // 0, 144, 94
+
+// content width
+$content-width: 1060px;
+
+// text
+$font-family-main: '"Source Sans 3", sans-serif';
+$text-color-main-100: $color-main-80;
+$text-color-main-75: $color-main-60;
+$text-color-main-50: $color-main-40;
+$text-color-main-25: $color-main-20;
+$text-color-alt-100: $color-alt-100;
+$text-color-alt-70: $color-alt-70;
+
+// box shadows
+$box-shadow-main: 0px 1px 0.313rem 0px rgba($color-main-100, 0.3);
+$box-shadow-fancy: 0px 0px 0px 1px rgba($color-fancy-100, 0.8);
+
+// gradients
+$gradient-main-bg: linear-gradient(
+  180deg,
+  rgba($color-alt-25, 0.0001) 0%,
+  rgba(108, 54, 173, 0.1) 4.375rem,
+  rgba($color-alt-25, 0.0001) 100%
+);
+$gradient-nav: linear-gradient(
+  180deg,
+  rgba($color-alt-85, 1) 0%,
+  rgba($color-alt-55, 1) 100%
+);
+$gradient-btn: linear-gradient(0deg, $color-fancy-60 0%, $color-fancy-30 100%);
+
+// background
+$background-main: $color-alt-25;
+$background-alt: $color-alt-100;
+$background-fancy-10: $color-fancy-10;
+$background-card-backdrop: rgba($color-main-100, 0.4);
+$background-card: rgba($color-alt-70, 1);
+
+// box-shadow
+$shadow-btn: 0px 0px 0px 0.063rem rgba($color-fancy-100, 0.8);
+$shadow-card: 0px 1px 0.313rem 0px rgba($color-main-100, 0.3);
+$shadow-chips: 0px 1px 1px 0px rgba(198, 198, 198, 0.5);
+
+// border
+$border-color-main-100: $color-alt-20;
+$border-color-main-80: $color-alt-15;
+
+// scrollbar
+$scrollbar-thumb-bg: $color-alt-55;
+$scrollbar-thumb-border-radius: 1.25rem;
+$scrollbar-thumb-width: 0.375rem;
+$scrollbar-thumb-border: 0.313rem solid transparent;
+$scrollbar-width: 1rem;
