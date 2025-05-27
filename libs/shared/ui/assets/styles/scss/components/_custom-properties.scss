@@ -1,39 +1,5 @@
 @use "variables";
 
 :root {
-  // text
-  --content-width: #{variables.$content-width};
-  --font-family-main: #{variables.$font-family-main};
-  --text-color-main-100: #{variables.$text-color-main-100};
-  --text-color-main-75: #{variables.$text-color-main-75};
-  --text-color-main-50: #{variables.$text-color-main-50};
-  --text-color-main-25: #{variables.$text-color-main-25};
-  --text-color-alt-100: #{variables.$text-color-alt-100};
-  --text-color-alt-70: #{variables.$text-color-alt-70};
-  // box shadows
-  --box-shadow-main: #{variables.$box-shadow-main};
-  --box-shadow-fancy: #{variables.$box-shadow-fancy};
-  // gradients
-  --gradient-main-bg: #{variables.$gradient-main-bg};
-  --gradient-nav: #{variables.$gradient-nav};
-  --gradient-btn: #{variables.$gradient-btn};
-  // background
-  --background-main: #{variables.$background-main};
-  --background-alt: #{variables.$background-alt};
-  --background-fancy-10: #{variables.$background-fancy-10};
-  --background-card-backdrop: #{variables.$background-card-backdrop};
-  --background-card: #{variables.$background-card};
-  // border
-  --border-color-main-100: #{variables.$border-color-main-100};
-  --border-color-main-80: #{variables.$border-color-main-80};
-  // box-shadow
-  --shadow-btn: #{variables.$shadow-btn};
-  --shadow-card: #{variables.$shadow-card};
-  --shadow-chips: #{variables.$shadow-chips};
-  // scrollbar
-  --scrollbar-thumb-bg: #{variables.$scrollbar-thumb-bg};
-  --scrollbar-thumb-border-radius: #{variables.$scrollbar-thumb-border-radius};
-  --scrollbar-thumb-width: #{variables.$scrollbar-thumb-width};
-  --scrollbar-thumb-border: #{variables.$scrollbar-thumb-border};
-  --scrollbar-width: #{variables.$scrollbar-width};
+  @include variables.fill-custom-props;
 }
